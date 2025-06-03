@@ -1,0 +1,383 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Điểm đến nổi bật */
+.favorite-destinations {
+  max-width: 1400px;
+  margin: 0 auto;
+  
+  padding-top: 100px;
+  padding-bottom: 48px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  
+}
+.destination-card {
+  width: 330px;
+  height: 300px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 10px;
+}
+
+.destination-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ảnh luôn fill full card */
+  transition: transform 0.6s ease;
+}
+
+.destination-card:hover .card-img {
+  transform: scale(1.1);
+}
+
+.bg-gradient-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+/* Ẩm thực */
+.foot-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.foot-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.foot-description {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.foot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 250px);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.foot-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific card positions */
+.foot-card:nth-child(1) {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.foot-card:nth-child(2) {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+
+.foot-card:nth-child(3) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.foot-card:nth-child(4) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.foot-card:nth-child(5) {
+  grid-column: 1;
+  grid-row: 3 / span 2;
+}
+
+.foot-card:nth-child(6) {
+  grid-column: 2 / span 2;
+  grid-row: 3;
+}
+
+.foot-card:nth-child(7) {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+.foot-card:nth-child(8) {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+.foot-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.foot-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.foot-card:hover img {
+  transform: scale(1.1);
+}
+
+@media (max-width: 992px) {
+  .foot-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 250px);
+  }
+}
+
+@media (max-width: 768px) {
+  .foot-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 250px);
+  }
+
+  .foot-description {
+    font-size: 1em;
+    padding: 0 20px;
+  }
+}
+
+/* Nơi ở */
+.living-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.living-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.living-description {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.living-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 300px);
+  gap: 20px;
+}
+
+.living-space-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.living-space-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.living-space-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.living-space-card:hover img {
+  transform: scale(1.1);
+}
+
+.living-space-card:nth-child(1) {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+}
+
+.living-space-card:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2 / span 2;
+}
+
+.living-space-card:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.living-space-card:nth-child(4) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.living-space-card:nth-child(5) {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.living-space-card:nth-child(6) {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .living-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 250px);
+  }
+}
+
+@media (max-width: 768px) {
+  .living-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 250px);
+  }
+
+  .living-description {
+    font-size: 1em;
+    padding: 0 20px;
+  }
+}
+/* Footer */
+.footer-container {
+  margin-top: 120px;
+  background-color: #f8f9fa;
+  color: #4a5568;
+  padding: 3rem 1rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer-heading {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-link {
+  color: #2d3748;
+  text-decoration: none;
+  display: block;
+  padding: 0.25rem 0;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #4299e1;
+}
+
+.partners-heading {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-logo {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  transition: transform 0.3s ease;
+  justify-self: center;
+}
+
+.payment-logo:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 640px) {
+  .payment-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.footer-bottom {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.copyright {
+  font-size: 0.875rem;
+  color: #718096;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+}

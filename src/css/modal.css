@@ -1,0 +1,72 @@
+/* ../css/modal.css */
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.form-label {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.form-control, .form-select {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s;
+    width: 100%;
+    padding: 10px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    width: 100%;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.text-danger {
+    font-size: 0.85rem;
+}
+
+/* Đảm bảo modal và backdrop có z-index cao hơn header (z-index: 9999) */
+.modal-backdrop {
+    z-index: 10000 !important;
+    opacity: 0.5 !important;
+}
+
+.modal {
+    z-index: 10001 !important;
+}
+
+/* Đảm bảo modal không bị ẩn */
+.modal.fade .modal-dialog {
+    transform: none !important;
+}
+
+/* Đảm bảo form có thể tương tác */
+.modal-content, .modal-body, .form-control, .form-select, .btn {
+    pointer-events: auto !important;
+}
